@@ -1,0 +1,20 @@
+
+<h2>Cards Cards Cards</h2>
+
+<ul>
+	<h1><%= @card_shuffle.question %></h1>
+
+	<%= form_for [@card, @card.answer] do |c| %>
+	<%= c.label :answer %>
+	<%= c.text_field :answer %>
+<!-- 
+	<%= f.submit %> -->
+	<%= link_to "Get the Answer", card_path (card) %>
+
+	<% end %>
+	
+	<li><%= link_to "Create a Card", new_card_path %></li> 
+<% @cards.each do |card| %>
+  <li> <%= link_to card.question, card_path(card) %></li>
+<% end %>
+</ul>

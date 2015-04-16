@@ -1,0 +1,11 @@
+
+<h2><%= @card.question %></h2>
+<p><%= @card.answer %></p>
+<p><%= @answer %></p>
+<br>
+
+<%= link_to 'Edit the Question', edit_card_path(@card) %>
+<br></br>
+<%= link_to 'Delete the Question', card_path(@card), method: :delete %>
+<br></br>
+<%= link_to 'Go Back to the Homepage', cards_path %>
